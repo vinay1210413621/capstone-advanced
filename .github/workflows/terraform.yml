@@ -12,7 +12,18 @@ on:
       - "infrastructure/**"
       - ".github/workflows/terraform.yml"
       - ".github/workflows/reusable-terraform.yml"
-
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Deployment environment'
+        required: false
+        default: 'production'
+        type: choice
+        options:
+          - development
+          - staging
+          - production
+          
 permissions:
   contents: read
 
