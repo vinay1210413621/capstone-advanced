@@ -41,4 +41,5 @@ jobs:
         with:
           directory: ${{ inputs.working_dir }}
           framework: terraform
+          output_format: cli
           soft_fail: false
